@@ -1,0 +1,177 @@
+EESchema Schematic File Version 4
+LIBS:power
+LIBS:device
+LIBS:74xx
+LIBS:audio
+LIBS:interface
+LIBS:first_try-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L lib_pro:ct124 U?
+U 1 1 5B09E6D0
+P 5250 3900
+F 0 "U?" H 5250 3435 50  0000 C CNN
+F 1 "ct124" H 5250 3526 50  0000 C CNN
+F 2 "" H 5250 3900 50  0001 C CNN
+F 3 "" H 5250 3900 50  0001 C CNN
+	1    5250 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B09E751
+P 6400 3400
+F 0 "R?" H 6470 3446 50  0000 L CNN
+F 1 "R" H 6470 3355 50  0000 L CNN
+F 2 "" V 6330 3400 50  0001 C CNN
+F 3 "~" H 6400 3400 50  0001 C CNN
+	1    6400 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B09E785
+P 7100 3400
+F 0 "R?" H 7170 3446 50  0000 L CNN
+F 1 "R" H 7170 3355 50  0000 L CNN
+F 2 "" V 7030 3400 50  0001 C CNN
+F 3 "~" H 7100 3400 50  0001 C CNN
+	1    7100 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5B09E80A
+P 3700 3200
+F 0 "D?" V 3746 3121 50  0000 R CNN
+F 1 "D" V 3655 3121 50  0000 R CNN
+F 2 "" H 3700 3200 50  0001 C CNN
+F 3 "~" H 3700 3200 50  0001 C CNN
+	1    3700 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5B09E8C5
+P 3850 4850
+F 0 "D?" V 3804 4929 50  0000 L CNN
+F 1 "D" V 3895 4929 50  0000 L CNN
+F 2 "" H 3850 4850 50  0001 C CNN
+F 3 "~" H 3850 4850 50  0001 C CNN
+	1    3850 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 5B09E993
+P 3100 4850
+F 0 "J?" H 3206 5028 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 3206 4937 50  0000 C CNN
+F 2 "" H 3100 4850 50  0001 C CNN
+F 3 "~" H 3100 4850 50  0001 C CNN
+	1    3100 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B09EA6E
+P 3300 5550
+F 0 "#PWR?" H 3300 5300 50  0001 C CNN
+F 1 "GND" H 3305 5377 50  0000 C CNN
+F 2 "" H 3300 5550 50  0001 C CNN
+F 3 "" H 3300 5550 50  0001 C CNN
+	1    3300 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5B09EAA3
+P 6750 3000
+F 0 "#PWR?" H 6750 2850 50  0001 C CNN
+F 1 "+3.3V" H 6765 3173 50  0000 C CNN
+F 2 "" H 6750 3000 50  0001 C CNN
+F 3 "" H 6750 3000 50  0001 C CNN
+	1    6750 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 3000 6400 3000
+Wire Wire Line
+	6400 3000 6400 3250
+Wire Wire Line
+	6750 3000 7100 3000
+Wire Wire Line
+	7100 3000 7100 3250
+Connection ~ 6750 3000
+Wire Wire Line
+	6400 3550 6400 4100
+Wire Wire Line
+	6400 4100 5750 4100
+Wire Wire Line
+	5750 3900 7100 3900
+Wire Wire Line
+	7100 3900 7100 3550
+Wire Wire Line
+	7100 3900 7600 3900
+Connection ~ 7100 3900
+Wire Wire Line
+	4750 3700 4400 3700
+Wire Wire Line
+	3700 3700 3700 3350
+Wire Wire Line
+	4750 4100 4400 4100
+Wire Wire Line
+	4400 4100 4400 3700
+Connection ~ 4400 3700
+Wire Wire Line
+	4400 3700 3700 3700
+Wire Wire Line
+	4750 3900 3300 3900
+Wire Wire Line
+	3300 3900 3300 4450
+Wire Wire Line
+	3300 4950 3300 5450
+Wire Wire Line
+	3850 5000 3850 5450
+Wire Wire Line
+	3850 5450 3300 5450
+Connection ~ 3300 5450
+Wire Wire Line
+	3300 5450 3300 5550
+Wire Wire Line
+	3300 4450 3850 4450
+Wire Wire Line
+	3850 4450 3850 4700
+Connection ~ 3300 4450
+Wire Wire Line
+	3300 4450 3300 4850
+Wire Wire Line
+	3700 3050 3700 2700
+$Comp
+L power:VCC #PWR?
+U 1 1 5B09F9E0
+P 3700 2700
+F 0 "#PWR?" H 3700 2550 50  0001 C CNN
+F 1 "VCC" H 3717 2873 50  0000 C CNN
+F 2 "" H 3700 2700 50  0001 C CNN
+F 3 "" H 3700 2700 50  0001 C CNN
+	1    3700 2700
+	1    0    0    -1  
+$EndComp
+Text HLabel 7600 3900 2    50   Input ~ 0
+bladecontrol
+NoConn ~ 5750 3700
+$EndSCHEMATC
