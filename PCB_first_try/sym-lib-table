@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name lib_pro)(type Legacy)(uri C:/Users/A1201-admin/Documents/PCB_first_try/Library/lib_pro.lib)(options "")(descr ""))
+  (lib (name first_try-rescue)(type Legacy)(uri ${KIPRJMOD}/first_try-rescue.lib)(options "")(descr ""))
 )

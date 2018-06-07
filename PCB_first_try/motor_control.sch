@@ -1,9 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:power
-LIBS:device
 LIBS:74xx
-LIBS:audio
-LIBS:interface
 LIBS:first_try-cache
 EELAYER 26 0
 EELAYER END
@@ -20,7 +17,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L LM18200T:LM18200T IC?
+L first_try-rescue:LM18200T-LM18200T IC?
 U 1 1 5AFDD0C4
 P 5800 2200
 F 0 "IC?" H 5800 2967 50  0000 C CNN
@@ -360,7 +357,7 @@ Connection ~ 6650 2700
 Text HLabel 7200 3000 2    50   BiDi ~ 0
 currentsense1
 $Comp
-L LM18200T:LM18200T IC?
+L first_try-rescue:LM18200T-LM18200T IC?
 U 1 1 5AFEC512
 P 5850 4950
 F 0 "IC?" H 5850 5717 50  0000 C CNN
@@ -708,7 +705,7 @@ Wire Wire Line
 Connection ~ 2300 1700
 Connection ~ 2350 4450
 $Comp
-L lib_pro:ct124 U?
+L first_try-rescue:ct124-lib_pro U?
 U 1 1 5AFD714A
 P 2050 6400
 F 0 "U?" H 2050 5935 50  0000 C CNN

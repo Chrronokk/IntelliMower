@@ -1,15 +1,12 @@
 EESchema Schematic File Version 4
 LIBS:power
-LIBS:device
 LIBS:74xx
-LIBS:audio
-LIBS:interface
 LIBS:first_try-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -687,7 +684,7 @@ Wire Wire Line
 	2950 5650 3900 5650
 Connection ~ 2950 4850
 $Comp
-L lib_pro:ADM8660 U?
+L first_try-rescue:ADM8660-lib_pro U?
 U 1 1 5B0BCE64
 P 8450 1500
 F 0 "U?" H 8500 1915 50  0000 C CNN

@@ -1,9 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:power
-LIBS:device
 LIBS:74xx
-LIBS:audio
-LIBS:interface
 LIBS:first_try-cache
 EELAYER 26 0
 EELAYER END
@@ -20,7 +17,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L lib_pro:ct124 U?
+L first_try-rescue:ct124-lib_pro U?
 U 1 1 5B09E6D0
 P 5250 3900
 F 0 "U?" H 5250 3435 50  0000 C CNN

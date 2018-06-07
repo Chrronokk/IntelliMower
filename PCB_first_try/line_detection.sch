@@ -1,9 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:power
-LIBS:device
 LIBS:74xx
-LIBS:audio
-LIBS:interface
 LIBS:first_try-cache
 EELAYER 26 0
 EELAYER END
@@ -20,7 +17,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L lib_pro:Linedetector U?
+L first_try-rescue:Linedetector-lib_pro U?
 U 1 1 5B0811BD
 P 1250 2550
 F 0 "U?" H 1275 2815 50  0000 C CNN
@@ -185,7 +182,7 @@ F 3 "~" H 6150 2300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L lib_pro:UA741 U?
+L first_try-rescue:UA741-lib_pro U?
 U 1 1 5B082BC6
 P 8200 2600
 F 0 "U?" H 8200 3015 50  0000 C CNN
@@ -522,7 +519,7 @@ Wire Wire Line
 	7450 2550 7700 2550
 NoConn ~ 7700 2450
 $Comp
-L lib_pro:Linedetector U?
+L first_try-rescue:Linedetector-lib_pro U?
 U 1 1 5B09A819
 P 1200 4950
 F 0 "U?" H 1225 5215 50  0000 C CNN
@@ -687,7 +684,7 @@ F 3 "~" H 6100 4700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L lib_pro:UA741 U?
+L first_try-rescue:UA741-lib_pro U?
 U 1 1 5B09A882
 P 8150 5000
 F 0 "U?" H 8150 5415 50  0000 C CNN

@@ -162,7 +162,7 @@ F1 "Device:C" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- C_*
+ *:C_*
 $ENDFPLIST
 DRAW
 P 2 0 1 20 -80 -30 80 -30 N
@@ -180,7 +180,7 @@ F1 "Device:CP" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- CP_*
+ *:CP_*
 $ENDFPLIST
 DRAW
 S -90 20 -90 40 0 1 0 N
@@ -203,7 +203,7 @@ F1 "Device:CP1" 25 -100 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- CP_*
+ *:CP_*
 $ENDFPLIST
 DRAW
 A 0 -150 128 1287 513 0 1 20 N -80 -50 80 -50
@@ -245,9 +245,10 @@ F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  TO-???*
+ *SingleDiode
  *_Diode_*
  *SingleDiode*
- D_*
+ *:D_*
 $ENDFPLIST
 DRAW
 P 2 0 1 8 -50 50 -50 -50 N
@@ -287,7 +288,7 @@ $FPLIST
  Choke_*
  *Coil*
  Inductor_*
- L_*
+ *:L_*
 $ENDFPLIST
 DRAW
 A 0 -75 25 -899 899 0 1 0 N 0 -100 0 -50
@@ -307,7 +308,7 @@ F1 "Device:R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- R_*
+ *:R_*
 $ENDFPLIST
 DRAW
 S -40 -100 40 100 0 1 10 N
@@ -324,43 +325,13 @@ F1 "Device:R_Variable" -100 -50 50 V V L CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- R_*
+ *:R_*
 $ENDFPLIST
 DRAW
 S -40 -100 40 100 0 1 10 N
 P 5 0 1 0 100 60 100 100 60 100 100 100 -80 -80 N
 X ~ 1 0 150 50 D 50 50 1 1 P
 X ~ 2 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# LM18200T:LM18200T
-#
-DEF LM18200T:LM18200T IC 0 40 Y Y 1 L N
-F0 "IC" -500 651 50 H V L BNN
-F1 "LM18200T:LM18200T" -501 -701 50 H V L BNN
-F2 "TO-220-11" 0 0 50 H I L BNN
-F3 "None" 0 0 50 H I L BNN
-F4 "National Semiconductor" 0 0 50 H I L BNN
-F5 "None" 0 0 50 H I L BNN
-F6 "Unavailable" 0 0 50 H I L BNN "Field7"
-F7 "LM18200T" 0 0 50 H I L BNN "Field8"
-DRAW
-P 2 0 0 10 -500 -600 -500 600 N
-P 2 0 0 10 -500 600 500 600 N
-P 2 0 0 10 500 -600 -500 -600 N
-P 2 0 0 10 500 600 500 -600 N
-X BOOTSTRAP1 1 600 300 100 L 40 40 0 0 I
-X OUTPUT2 10 600 -300 100 L 40 40 0 0 O
-X BOOTSTRAP2 11 600 -100 100 L 40 40 0 0 I
-X OUTPUT1 2 600 500 100 L 40 40 0 0 O
-X DIRECTION 3 -600 100 100 R 40 40 0 0 I
-X BREAK 4 -600 200 100 R 40 40 0 0 I
-X PWM 5 -600 0 100 R 40 40 0 0 I
-X VS 6 -600 500 100 R 40 40 0 0 W
-X GND 7 -600 -500 100 R 40 40 0 0 W
-X SENSE 8 600 -500 100 L 40 40 0 0 O
-X THERMAL 9 -600 -200 100 R 40 40 0 0 O
 ENDDRAW
 ENDDEF
 #
@@ -511,11 +482,11 @@ X ~ 8 0 300 200 D 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# lib_pro:ADM8660
+# first_try-rescue:ADM8660-lib_pro
 #
-DEF lib_pro:ADM8660 U 0 40 Y Y 1 F N
+DEF first_try-rescue:ADM8660-lib_pro U 0 40 Y Y 1 F N
 F0 "U" 150 -350 50 H V C CNN
-F1 "lib_pro:ADM8660" -200 -350 50 H V C CNN
+F1 "first_try-rescue:ADM8660-lib_pro" -200 -350 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -531,11 +502,41 @@ X V+ 8 550 150 200 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# lib_pro:Linedetector
+# first_try-rescue:LM18200T-LM18200T
 #
-DEF lib_pro:Linedetector U 0 40 Y Y 1 F N
+DEF first_try-rescue:LM18200T-LM18200T IC 0 40 Y Y 1 L N
+F0 "IC" -500 651 50 H V L BNN
+F1 "first_try-rescue:LM18200T-LM18200T" -501 -701 50 H V L BNN
+F2 "TO-220-11" 0 0 50 H I L BNN
+F3 "None" 0 0 50 H I L BNN
+F4 "National Semiconductor" 0 0 50 H I L BNN
+F5 "None" 0 0 50 H I L BNN
+F6 "Unavailable" 0 0 50 H I L BNN "Field7"
+F7 "LM18200T" 0 0 50 H I L BNN "Field8"
+DRAW
+P 2 0 0 10 -500 -600 -500 600 N
+P 2 0 0 10 -500 600 500 600 N
+P 2 0 0 10 500 -600 -500 -600 N
+P 2 0 0 10 500 600 500 -600 N
+X BOOTSTRAP1 1 600 300 100 L 40 40 0 0 I
+X OUTPUT2 10 600 -300 100 L 40 40 0 0 O
+X BOOTSTRAP2 11 600 -100 100 L 40 40 0 0 I
+X OUTPUT1 2 600 500 100 L 40 40 0 0 O
+X DIRECTION 3 -600 100 100 R 40 40 0 0 I
+X BREAK 4 -600 200 100 R 40 40 0 0 I
+X PWM 5 -600 0 100 R 40 40 0 0 I
+X VS 6 -600 500 100 R 40 40 0 0 W
+X GND 7 -600 -500 100 R 40 40 0 0 W
+X SENSE 8 600 -500 100 L 40 40 0 0 O
+X THERMAL 9 -600 -200 100 R 40 40 0 0 O
+ENDDRAW
+ENDDEF
+#
+# first_try-rescue:Linedetector-lib_pro
+#
+DEF first_try-rescue:Linedetector-lib_pro U 0 40 Y Y 1 F N
 F0 "U" -900 -450 50 H V C CNN
-F1 "lib_pro:Linedetector" -1350 -750 50 H V C CNN
+F1 "first_try-rescue:Linedetector-lib_pro" -1350 -750 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -545,11 +546,11 @@ X NEG 2 -500 0 200 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# lib_pro:UA741
+# first_try-rescue:UA741-lib_pro
 #
-DEF lib_pro:UA741 U 0 40 Y Y 1 F N
+DEF first_try-rescue:UA741-lib_pro U 0 40 Y Y 1 F N
 F0 "U" -650 -550 50 H V C CNN
-F1 "lib_pro:UA741" -900 -400 50 H V C CNN
+F1 "first_try-rescue:UA741-lib_pro" -900 -400 50 H V C CNN
 F2 "" 0 -100 50 H I C CNN
 F3 "" 0 -100 50 H I C CNN
 DRAW
@@ -565,11 +566,11 @@ X NC 8 500 150 200 L 50 50 1 1 N
 ENDDRAW
 ENDDEF
 #
-# lib_pro:ct124
+# first_try-rescue:ct124-lib_pro
 #
-DEF lib_pro:ct124 U 0 40 Y Y 1 F N
+DEF first_try-rescue:ct124-lib_pro U 0 40 Y Y 1 F N
 F0 "U" 0 350 50 H V C CNN
-F1 "lib_pro:ct124" 0 -500 50 H V C CNN
+F1 "first_try-rescue:ct124-lib_pro" 0 -500 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW

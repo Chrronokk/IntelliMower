@@ -1,9 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:power
-LIBS:device
 LIBS:74xx
-LIBS:audio
-LIBS:interface
 LIBS:first_try-cache
 EELAYER 26 0
 EELAYER END
